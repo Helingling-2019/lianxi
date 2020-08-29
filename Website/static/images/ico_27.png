@@ -1,0 +1,21 @@
+<pre>An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request: public/error in /www/wwwroot/qianwu/qianwuwang/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /www/wwwroot/qianwu/qianwuwang/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller-&gt;runAction(&#039;error&#039;, Array)
+#1 /www/wwwroot/qianwu/qianwuwang/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module-&gt;runAction(&#039;public/error&#039;)
+#2 /www/wwwroot/qianwu/qianwuwang/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler-&gt;renderException(Object(yii\web\NotFoundHttpException))
+#3 [internal function]: yii\base\ErrorHandler-&gt;handleException(Object(yii\web\NotFoundHttpException))
+#4 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request &quot;css/image/ico_27.png&quot;. in /www/wwwroot/qianwu/qianwuwang/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /www/wwwroot/qianwu/qianwuwang/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module-&gt;runAction(&#039;css/image/ico_2...&#039;, Array)
+#1 /www/wwwroot/qianwu/qianwuwang/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application-&gt;handleRequest(Object(yii\web\Request))
+#2 /www/wwwroot/qianwu/qianwuwang/frontend/web/index.php(26): yii\base\Application-&gt;run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /www/wwwroot/qianwu/qianwuwang/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /www/wwwroot/qianwu/qianwuwang/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application-&gt;handleRequest(Object(yii\web\Request))
+#1 /www/wwwroot/qianwu/qianwuwang/frontend/web/index.php(26): yii\base\Application-&gt;run()
+#2 {main}</pre>

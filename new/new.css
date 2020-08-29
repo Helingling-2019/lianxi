@@ -1,0 +1,75 @@
+@media screen {
+  .nav {
+    width: 1200px;
+  }
+}
+@font-face {
+  font-family: abc;
+  src: url("fonts/Gargoyles.ttf");
+}
+.footer {
+  font-family: abc;
+  font-style: 100px;
+}
+.container {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  animation: rot 1s ease infinite;
+}
+.forNew,
+.new,
+.newOne {
+  color: #fff;
+}
+.new,
+.newOne {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  margin-left: -6.25rem;
+  margin-top: 234px;
+}
+.newOne {
+  width: 12.5rem;
+  height: 7.5rem;
+  background: #f00;
+}
+.add {
+  margin: 4px;
+  padding: 1px + 0.1875rem;
+  font: 14px/2 arial;
+  font: 7px arial;
+}
+@-moz-keyframes rot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes rot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

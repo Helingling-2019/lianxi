@@ -1,0 +1,159 @@
+.nav 
+  color red 
+  font-size  15px
+  width  120px
+ul,li
+  list-style none
+.nav ul li a
+  background red
+  color #fff
+  &:hover
+    background #fff
+selfDefinition(arg1,arg2)
+  padding arg1
+  margin (- arg2)
+ .container
+   selfDefinition(5px,10px)
+  qianzui(attr,val)
+    -webkit-{attr} val
+	-moz-{attr} val
+	-o-{attr} val
+	-ms-{attr} val
+	{attr} val
+ .box
+   qianzui("box-shadow",0 0 10px #000)
+ .navButton
+   qianzui("border-radius",6px)
+first = #f34
+bg = url(images/1.jpg) no-repat left center first
+.wrap
+  color:first
+  background:bg
+  newColor = #f54980
+  &:hover
+    background:#f00
+.newWrap
+  color newColor
+  
+.wrap
+  color:first
+  background:bg
+  line-height:line = 30px 
+  height:line*2
+  margin:20px 
+  padding:@margin
+  border-width:@margin
+  newColor = #f34980
+  &:hover
+    color newColor
+	
+.content ul
+  for row in 1...7
+    li:nth-child({row})
+      margin-left 10px*row
+$a = 10
+$b = 11
+panduan(one,two)
+  if one > two
+    background #333
+  else
+    background #666
+.bigBox
+  panduan($a,$b)
+.subNav
+  margin num
+express = 11
+bool = (express > 10)?true:false
+.footer
+  width bool
+newExpress = 50px
+newExpress := 100px
+.body
+  margin newExpress
+ispanduan = 15
+.new
+  width (ispanduan is a 'unit')
+.newbox
+  width (type(ispanduan) == 'unit')
+  height (ispanduan is defind)
+varit1 = 15
+varit2 = 20
+.latest
+  margin (varit1 + varit2)px
+  padding unit(varit1 + varit2,px)
+func(arg1=100px,arg2=100px)
+  position absolute
+  width: arg1
+  height arg2
+  margin-left (-(arg1 / 2))
+  margin-top (-(arg2 / 2))
+.containerBox
+  func(300px,560px)
+  background  red
+opacity(n=1)
+  opacity n
+  if support-for-ie
+    filter unquote('alpha(opacity='+ n*100 + ')')
+.title
+  width 6.25rem
+  height 6.25rem
+  background red
+  opacity 0.6
+  margin addd(10,20px)
+map = 10px 20px 10px 30px
+//push
+append(map,40px,50px)
+.kou
+  margin-top map[3]
+hanshu()
+  10px 20px 30px 40px
+.han
+  padding hanshu()[2]
+condition($x,$y)
+  if $x > $y 
+    $z = true
+  else if $x < $y
+    $z = false
+  else
+    $z = equal
+	
+.wrapInner
+  height condition(10px,10px)
+  background rgba(alpha:1,red:255,blue:255,green=255)
+
+arr = (name '张三') (number 128347) (score 59)
+.box-1
+  width keys(arr)[0]
+  height values(arr)[1]
+telphone = '1896459334'
+check(param)
+  if match('^1\d[10]$',param)
+    width 6.25rem
+  else
+    width 50px
+/* num3 = 12px
+.check
+  check telphone
+  margin abs(num3)
+  padding unit(min(10,20),px)
+  width unit(max(30,50),px)
+  height even(80)
+  border-width odd(80px)
+  background-size sum(10px 20px 30px)
+  width unquote(join(','10px 20px 30px))
+  height operate('*',20px,30px) */
+boxfunc(arg1...)
+  sum(arg1)
+.box-3
+  width boxfunc(10px,20px,30px,40px,50px)
+uns(param)
+  unless param
+    width 6.25rem
+.uns
+  uns(false)
+.body
+  margin unit(n,px) for n in 1..6
+mip = '宋体' '微软雅黑' '楷体'
+.mot
+  for value,key in mip
+    font-family key

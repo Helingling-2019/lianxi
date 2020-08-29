@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>吾创天地</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style/cy.css">
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<div class="exper">
+		<div class="exper-1">
+			<em>工作经历</em><span>让更多机会找到你，从此刻开始！</span>
+		</div>
+		<div class="content">
+			<div class="exper-2">
+				<input type="text" class="text-shu" placeholder="公司名称">
+				<input type="text" class="text-shu" placeholder="职位"/>
+				<div class="at-fir">
+					<span>起始时间</span>
+				</div>
+				<div class="at-fir">
+					<span>结束时间</span>
+				</div>
+			</div>
+		</div>
+		<div class="exper-3">
+			<input type="button" value="添加工作经历" class="button-add">
+			<input type="button" value="删除" class="button-delete">
+		</div>
+		<div class="exper-4">
+			<input type="button" value="上一步 " class="button-first">
+			<input type="button" value="完善工作经历" class="button-self">
+		</div>
+	</div>
+	<div class="list-a edite" id="sun">
+		<ul>
+			<li>2013.11</li>
+			<li>2014.02</li>
+			<li>2015.03</li>
+			<li>2015.12</li>
+			<li>2016.05</li>
+			<li>2017.10</li>
+			<li>2018.07</li>
+			<li>2019.09</li>
+		</ul>
+	</div>
+	<script>
+		$(document).on("click",function(){
+			var conf = confirm("您确定要删除该信息吗？");
+			if(conf){
+				$(this).parents("ul").nextAll("ul").each(function(){
+					var $text = Number($(this).children("li").eq(0).text()) -1;
+					$(this).children("li").eq(0).text("button");
+				})
+			}
+		})
+		$(".button-delete").click(function(){
+				$(this).parent().parent().siblings(".experien-b").remove();
+				$(this).parent().parent().siblings(".skill").remove();
+				});
+	</script>
+</body>
+</html>

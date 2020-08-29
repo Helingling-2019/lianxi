@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<script src="js/jquery.min.js"></script>
+	<style>
+		*{margin: 0;padding: 0;}
+		a{text-decoration: none;}
+		ul li{list-style: none;}
+		.servicer{
+			position: fixed;
+			width:54px;
+			bottom:30px;
+			right:0;
+			height:270px;
+			background: rgba(0,0,0);
+			z-index: 999;
+		}
+		.body{
+			width:1000px;
+			margin: 0 auto;
+			background:lightblue;
+			height:1000px;
+		}
+		.servicer ul li{
+			width:54px;
+			height:54px;
+		}
+		.servicer ul li a{
+			display:block;
+			width:124px;
+			background:rgba(0,0,0);
+			transition: all .3s;
+		}
+		.servicer ul li img{
+			display:block;
+			width:54px;
+			height:54px;
+			float: left;
+		}
+		.servicer ul li span{
+			font-size: 14px;
+			line-height: 54px;
+			color:#fff;
+		}
+		.servicer ul li a.active{
+			background: rgb(174,28,28);
+		}
+	</style>
+</head>
+<body>
+	<div class="body"></div>
+	<div class="servicer">
+		<ul>
+			<li><a href=""><img src="images/side_icon01.png" alt=""><span>客服中心</span></a></li>
+			<li><a href=""><img src="images/side_icon02.png" alt=""><span>客服中心</span></a></li>
+			<li><a href=""><img src="images/side_icon03.png" alt=""><span>客服中心</span></a></li>
+			<li><a href=""><img src="images/side_icon04.png" alt=""><span>客服中心</span></a></li>
+			<li><a href=""><img src="images/side_icon05.png" alt=""><span>客服中心</span></a></li>
+		</ul>
+	</div>
+	<script>
+		$(".servicer ul li").hover(function(){
+			$(this).children("a").addClass("active").stop().animate({marginLeft:-70},300);
+		},function(){
+			$(this).children("a").removeClass("active").stop().animate({marginLeft:0},300);
+		})
+	</script>
+</body>
+</html>

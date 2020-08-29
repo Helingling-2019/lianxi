@@ -1,0 +1,62 @@
+@width:100px;
+.forAll{width:@width;float: left;}
+#forAll{height:120px;line-height: 120px;}
+.nav ul li{width:@width;float: left;}
+.nav {width:1200px;margin: 0 auto;
+ul {overflow: hidden;}
+a{display: block;width:100%;height:24px;line-height: 24px;
+&:hover{
+	background:skyblue;
+	
+	color: #ffffff;
+}
+&::after{
+	content:"";
+	width:0;
+	height:0;
+	clear:both;
+	visibility: hidden;
+}
+}
+}
+.content{width:1200px;
+@media(max-width:1199px) and (min-width:737px){
+	width:100%;
+}
+@media(max-width:736px) and (min-width:320px){
+	width:96%;
+	padding:0 2%;
+ }
+}
+.main{color: #ffffff;.forAll();
+#forAll();}
+.footer{.forAll();#forAll();}
+@num1:1;
+@num2:2;
+@num3:10px;
+@num4:12px;
+@color:#e1251b;
+@color0:#110000;
+.box{line-height:@num1 + @num2;margin:(@num3 - @num4)*@num1;padding:@num1*@num3;color:@color + @color0;
+background:@color0*2;}
+/* 内置函数 */
+@margin:5.5px;
+.wrap{margin:floor(@margin);
+/* if(@num2 < @num1) */}
+/* 转义 */
+@med:~"(max-width:736px)";
+@media @med{
+	.subNav{width:120px;}
+}
+@color:red;
+.subNav{color:@color;
+@color1:blue;
+a{color:@color1;}}
+.box1{color:@color;background: @color;}
+#BOX(){
+	.box-1{width:50%;float: left;}
+	.box-2{width:50%;float: right;}
+	.box-3{width:30%;float: none;}
+	}
+	.box-wrap{#BOX.box-1();hieght:42px;}
+	.container-wrap{#BOX.box-2();}

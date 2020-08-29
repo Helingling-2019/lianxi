@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+	*{ margin:0; padding:0;}
+	.prize{ width:720px; margin:0 auto; background:url(images/bg.png) no-repeat center top; min-height:1500px; overflow: hidden;}
+	.prize-rotate{ position: relative; width:578px; height:578px; margin:562px auto 0;}
+	.prize-2{ position: absolute; left:50%; top:50%; width:145px; height:173px; margin-left:-78px; margin-top:-99.5px; cursor: pointer;}
+	.prize-1{ display: block; width:578px; height:578px; transition:transform 3s cubic-bezier(0.12, 0.83, 0.22, 0.95);}
+	/* animation:ani 3s cubic-bezier(0.12, 0.83, 0.22, 0.95);
+	@keyframes ani{
+		from{ transform: rotate(0);}
+		  to{ transform:rotate(7200deg)}
+	}  */
+</style>
+	<div class="prize">
+		<span id="count">有5次抽奖机会</span>
+		<div class="prize-rotate">
+			<span class="prize-1"> <img src="images/dzp-xx.png" alt=""></span>
+			<span class="prize-2 enabled"> <img src="images/kscj.png" alt=""></span>
+			<div class="prize-3"></div>
+		</div>
+	</div>
+	<script>
+		var count = 5;
+		var i = 1;
+		$(".prize-2").on("click",function(){
+			
+			
+			if($(this).hasClass("enabled")){
+			count--;
+			if(count<0) { alert("今天的抽奖机会已用完"); return false;}	
+			console.log(count);
+			$("#count").html("你还剩" + count + "次");
+			$.ajax({
+				url:"prize.php",
+				dataType:"json",
+				type:"post",
+				success:function(data){
+					
+					// data数据
+					var which = data;
+					if(which==1){
+						setTimeout(function(){
+							alert("谢谢参与！");
+						},3000)
+					var ran = Math.random();
+					var ran1 = Math.round(ran*60);
+					if(ran1==0 || ran1 ==1){ ran1 = 2;}
+					if(ran1==60 || ran1 ==59){ ran1 = 58;}
+					var rotate = "rotate(" + (1440*i - ran1) + "deg)";
+					$(".prize-1").css("transform",rotate);
+					i++;
+					}else if(which==2){
+						setTimeout(function(){
+							alert("恭喜你获得一张房卡！");
+							$(".prize-3").append("<p>恭喜你获得一张房卡</p>");
+						},3000)
+						
+						var ran = Math.round(Math.random());
+						if(ran==0){
+							var newran = Math.random();
+							var newran1 =  Math.round(newran*120) + 240;
+							if(newran1 == 240 || newran1 == 241){ newran1 = 242;}
+							if(newran1 == 360 || newran1 == 359){ newran1 = 358;}
+							if(newran1 == 270 || newran1 == 269 || newran1 == 271){ newran1 = 260;}
+						var rotate = "rotate(" + (1440*i - newran1) + "deg)";
+						$(".prize-1").css("transform",rotate);
+						i++;	
+						}else if(ran==1){
+							{
+								var newran = Math.random();
+								var newran1 =  Math.round(newran*120) + 60;
+								if(newran1 == 60 || newran1 == 61){ newran1 = 62;}
+								if(newran1 == 180 || newran1 == 179){ newran1 = 178;}
+								if(newran1 == 90 || newran1 == 89 || newran1 == 91){ newran1 = 80;}
+							var rotate = "rotate(" + (1440*i - newran1) + "deg)";
+							$(".prize-1").css("transform",rotate);
+							i++;	
+							}
+						}
+						
+					}else if(which==3){
+						setTimeout(function(){
+							alert("恭喜你获得翻倍奖励！");
+							$(".prize-3").append("<p>恭喜获得翻倍奖励</p>");
+						},3000)
+					var ran = Math.random();
+					var ran1 = Math.round(ran*90) + 180;
+					if(ran1==180 || ran1 ==181){ ran1 = 182;}
+					if(ran1==270 || ran1 ==269){ ran1 = 268;}
+					var rotate = "rotate(" + (1440*i - ran1) + "deg)";
+					$(".prize-1").css("transform",rotate);
+					i++;
+					}
+					
+				},
+				error:function(data){
+					alert("网络连接失败!");
+				}
+			})
+			}
+			$(this).addClass("disabled").removeClass("enabled");
+			setTimeout(function(){
+				$(".prize-2").addClass("enabled").removeClass("disabled");
+			},3000);
+			
+		})
+	</script>
+</body>
+</html>

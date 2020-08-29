@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+</head>
+<body>
+	<div style="height:1000px"></div>
+<style>
+	*{ margin:0; padding:0;}
+	ul,li{ list-style:none;}
+	input,button{ outline:none;}
+	.log{ width:300px; height:42px; cursor: pointer; display: block; margin:30px auto; background:red; color:#fff; font-size:16px; border:none; border-radius:6px;}
+	.shadow{ width:100%; height:100%; background:rgba(0,0,0,.3); position: fixed; left:0; top:0; z-index: 1; display: none;}
+	.login{ position: fixed; width:500px; height:280px; background:#fff; left:50%; top:50%; margin-left:-250px; margin-top:-140px; overflow: hidden; z-index: 2; border-radius:8px; box-shadow:0 0 38px #333; display:none;}
+	.login > span{ position: absolute; right:0; top:0; width:42px; height:42px; text-align: center; font-size:20px; cursor: pointer; line-height:42px; color:red;}
+	.login h2{ text-align: center; cursor: move; color:red; font-size:20px; line-height:42px; border-bottom: 1px solid #ddd; margin-bottom: 30px;}
+	.login form p{ padding:10px 0;}
+	.login form p span{ display:inline-block; line-height:36px; text-align: right; margin-right:10px; width:100px;}
+	.login form p input{ border-radius:5px; width:280px; padding:5px 10px; height:26px; line-height:26px; border:1px solid #999; font-size:14px; color:#333;}
+	.login button{ width:100px; height:38px; cursor: pointer; display: block; margin:20px auto; background:red; color:#fff; font-size:16px; border:none; border-radius:6px;}
+	button:hover{ background:#f40;}
+	@keyframes animate{
+		from{ opacity:0; transform:scale(.75);}
+		  to{ opacity:1; transform:none;}
+	}
+	.animated{ animation:animate .3s ease;}
+	
+	@keyframes reverseanimate{
+		from{ opacity:1; transform:scale(1);}
+		  to{ opacity:0; transform:scale(.75);}
+	}
+	.reverseAnimated{ animation:reverseanimate .1s linear forwards;}
+	.login *::selection{ background:#fff;}
+</style>
+	<button class="log">登录</button>
+	<div class="shadow"></div>
+	<div class="login">
+		<h2>登录</h2>
+		<span>x</span>
+		<form action="">
+			<p><span>用户名：</span> <input type="text" placeholder="请输入用户名" /></p>
+			<p><span>密码：</span> <input type="password" placeholder="请输入密码" /></p>
+			<p><button>登录</button></p>
+		</form>
+	</div>
+	<script>
+		 function $(param){
+			 if(arguments[1] == true){
+				 return document.querySelectorAll(param);
+			 }else{
+				 return document.querySelector(param);
+			 }
+		 };
+		 var button = $(".log");
+		 var shadow = $(".shadow");
+		 var login = $(".login");
+		
+		 button.onclick = function(){
+			 shadow.style.display = "block";
+			 login.style.display = "block";
+			 login.className = "login animated";
+			 windowWidth = window.innerWidth;
+			 windowHeight = window.innerHeight;
+			 boxWidth = login.offsetWidth;
+			 boxHeight = login.offsetHeight;
+			 
+			 rightLin = windowWidth - boxWidth + 250;
+			 bottomLin = windowHeight - boxHeight + 140;
+		 }
+		 login.children[1].onclick = function(){
+			 login.className = "login reverseAnimated";
+			 setTimeout(function(){
+				 login.style.display = "none";
+				  shadow.style.display = "none";
+			 },90) 
+		 }
+		 login.children[0].onmousedown = function(ev){
+			 var ev = ev || window.event;
+			 var evleft = ev.clientX;
+			 var evtop = ev.clientY;
+			 var boxleft = login.offsetLeft;
+			 var boxtop = login.offsetTop;
+			 //alert(boxtop);
+			 var juliX = evleft - boxleft;
+			 var juliY = evtop - boxtop;
+			 document.onmousemove = function(ev){
+				  var ev = ev || window.event;
+				  var evLeft = ev.clientX;
+				  var evTop = ev.clientY;
+				  var newleft = evLeft - juliX;
+				  var newtop = evTop - juliY;
+				  var panduanleft =newleft + 250;
+				  var panduantop = newtop + 140;
+				  if(panduanleft<250){ panduanleft = 250};
+				  if(panduantop<140){ panduantop = 140};
+				  if(panduanleft>rightLin){ panduanleft = rightLin;}
+				  if(panduantop>bottomLin){ panduantop = bottomLin;}
+				 // if(panduanleft>)
+				  login.style.left=panduanleft + "px";
+				  login.style.top=panduantop + "px";
+			 }
+			 document.onmouseup = function(){
+				 document.onmousemove= null;
+			 };
+		 }
+	</script>
+</body>
+</html>

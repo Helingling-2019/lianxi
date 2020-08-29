@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="layui/css/layui.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+	<!--头部菜单  -->
+	<div class="m_top">
+		<div class="m_menu c">
+			<ul class="chi">
+				<li class="m_menu_span">
+					<img class="m_HeadMenu_img" src="picture/index1.png" alt="">
+					<span>China(简体)</span>
+					<i><img src="images/index2.png" alt=""></i>
+				</li>
+				<li class="m_menu_span">
+					<span>小程序</span>
+					<i><img src="images/index2.png" alt=""></i>
+				</li>
+				<li class="m_menu_span">
+					<span>公众号</span>
+					<i><img src="images/index2.png" alt=""></i>
+				</li>
+				<li class="right"><a href=""><img src="images/index3.png" alt="">咨询热线:400-0668-896</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 导航 -->
+	<div class="navigation">
+	<div class="m_nav_box">
+		<div class="m_nav chi">
+			<a href=""><img src="picture/logo_m.png" alt="" class="m_nav_logo"></a>
+			<ul>
+				<li class="nav_click">
+					<div class="m_nav_text"><span>首页</span></div>
+				</li>
+				<li class="nav_click">
+					<div class="m_nav_text">
+						<span>查找新房</span>
+						<div class="m_nav_list">
+							<img src="picture/index09.png" alt="">
+							<a href="">海南房产</a>
+							<a href="">越南房产</a>
+							<a href="">迪拜房产</a>
+							<a href="">马来西亚房产</a>
+							<a href="">柬埔寨房产</a>
+							<a href="">泰国房产</a>
+							<a href="">菲律宾房产</a>
+						</div>
+					</div>
+					<img src="picture/index07.png" alt="" class="arrow">
+				</li>
+				<li class="nav_click">
+					<div class="m_nav_text">
+						<span>置业攻略</span>
+					<div class="m_nav_list">
+						<img src="picture/index09.png" alt="">
+						<a href="">楼盘动态</a>
+						<a href="">政策解读</a>
+						<a href="">海外留学</a>
+						<a href="">海外生活</a>
+						<a href="">购房指南</a>
+					</div>
+				</div>
+				<img src="picture/index07.png" alt="" class="arrow">
+				</li>
+				<li class="nav_click">
+					<div class="m_nav_text">
+						<span>视频看房</span>
+					</div>
+				</li>
+				<li class="nav_click">
+					<div class="m_nav_text">
+						<span>特惠活动</span>
+						<div class="m_nav_list">
+							<img src="picture/index09.png" alt="">
+							<a href="">考察团</a>
+							<a href="">特价活动</a>
+						</div>
+					</div>
+					<img src="picture/index07.png" alt="" class="arrow">
+				</li>
+				<li class="nav_click">
+					<div class="m_nav_text"><span>帮我找房</span></div>
+				</li>
+			</ul>
+			<div class="form seek_input">
+				<input type="text"  name="country" id="country" placeholder="国家/城市/项目名"/>
+			<p><img src="picture/index10.png" alt=""></p>
+			</div>
+		</div>
+	</div>
+	<!-- <script>
+		function check(){
+			var $value1 = document.getElementById("country").value;
+			
+		}
+	</script> -->
+	<!-- 轮 播 图-->
+			<style>
+				  .layui-carousel div div{ width:100%; background-repeat: no-repeat; background-position: center top;}
+				  .layui-carousel[lay-arrow=always] .layui-carousel-arrow{ display: none;}
+			    </style>
+				<div class="layui-carousel" id="test1">
+			      <div carousel-item>
+			   <!-- <div style="background-image:url(static/picture/416ffd3b42831ae6d697738ca1dacc07.jpg)"></div> -->
+			    <div style="background-image:url(picture/48bb18b9a127be0be174ea7293259d23.jpg)"></div>
+				<div style="background-image:url(picture/6e85b7dfe499301e59b158c3b44228f2.jpg)"></div>
+				<div style="background-image:url(picture/f3f65d1e06af394cc7e9e5543810c83f.jpg)"></div>
+				<div style="background-image:url(picture/c2458a4cf6282e116973e34fb3f6cf71.jpg)"></div>
+				<div style="background-image:url(picture/1baac8ec99c80044bdc475b37ebd22cb.jpg)"></div>
+				<div style="background-image:url(picture/afa2846097afd4e35d27182e746942dc.jpg)"></div>
+				<div style="background-image:url(picture/90e95941e26868a966764223f364fe46.jpg)"></div>
+				<div style="background-image:url(picture/24301a9d782de1649ebf59fe33ed7f80.jpg)"></div>
+			    <!-- <div>条目4</div>
+			    <div>条目5</div> -->
+			  </div>
+			</div>
+			<!-- 条目中可以是任意内容，如：<img src=""> -->
+			<script src="layui/layui.js"></script>
+			<script>
+				layui.use('carousel', function(){
+				  var carousel = layui.carousel;
+				  //建造实例
+				  carousel.render({
+				    elem: '#test1'
+				    ,width: '100%' //设置容器宽度
+				    ,arrow: 'always' //始终显示箭头
+					,autoPlay:true
+					,delayTime:1000
+					,interTime:4000
+					,height:'510px'
+				  });
+				});
+				
+				</script>
+	<!-- 右侧导航 -->
+	<div class="siden">
+		<a href="javascript:void(0)" data-id="datum"><img src="picture/w_info.png" alt=""><span>免费资料</span></a>
+		<a href="javascript:void(0)" onclick="show_floatWindow();"><img src="picture/w_service.png" alt=""><span>在线客服</span></a>
+		<a href="javascript:void(0)" data-id="sun"><img src="picture/w_help.png" alt=""><span>帮我找房</span></a>
+		<a data-id="call" href="javascript:void(0);"><img src="picture/w_wire.png" alt=""><span>免费回电</span></a>
+	</div>
+	<!-- 广告 -->
+	<i class="i">广告</i>
+	<div class="m_country_box">
+		<div class="m_country_list">
+			<ul class="gdt">
+				<li class="c">
+					<a href="javascript:void(0)"><img src="picture/index11.png" alt="" class="icon"><span>全球</span><img src="picture/index12.png" class="arrow" alt=""></a>
+				</li>
+				<li class="countryClick c" data-region="92" data-py="jianpuzhai" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/jianpuzhai.jpg" alt="" class="icon"><span>柬埔寨</span><img src="picture/index12.png" class="arrow" alt=""></a>
+				</li>
+				<li class="countryClick c" data-region"107" data-py="feilvbin" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/feilvbin.jpg" alt="" class="icon"><span>菲律宾</span><img src="picture/index12.png" class="arrow" alt=""></a>
+				</li>
+				<li class="countryClick c" data-region="104" data-py="dibai" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/dibai.jpg" alt="" class="icon"><span>迪拜</span><img src="picture/index12.png" class="arrow" alt=""></a>
+				</li>
+				<li class="countryClick c" data-region="87" data-py="taiguo" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/taiguo.jpg" alt="" class="icon"><span>泰国</span><img src="picture/index12.png" class="arrow" alt=""></a>
+				</li>
+				<li class="countryClick c" data-region="95" data-py="malaixiya" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/malaixiya.jpg" alt="" class="icon"><span>马来西亚</span><img src="picture/index12.png" class="arrow" alt=""></a>
+				</li>
+				<li class="countryClick c" data-py="111" data-py="yuenan" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/yuenan.jpg" alt="" class="icon"><span>越南</span><img src="picture/index12.png" class="arrow" alt=""></a>
+				</li>
+				<li class="countryClick c" data-py="135" data-py="hainan" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/zhongguo.jpg" alt="" class="icon"><span>海南</span><img src="picture/index12.png" class="arrow" alt=""></a>
+				</li>
+				<li class="countryClick c" data-py="81" data-py="meiguo" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/meiguo.jpg" alt="" class="icon"><span>美国</span><img src="picture/index12.png" class="arrow" alt=""></a>
+				</li>
+				<li class="countryClick c" data-region="98" data-py="aodaliya" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/aodaliya.jpg" alt=""class="icon"><span>澳大利亚</span><img src="picture/index12.png" alt="" class="arrow"></a>
+				</li>
+				<li class="countryClick c" data-region="121" data-py="miandian" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/miandian.jpg" alt=""class="icon"><span>缅甸</span><img src="picture/index12.png" alt="" class="arrow"></a>
+				</li>
+				<li class="countryClick c" data-region="124" data-py="laowo" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/laowo.jpg" alt=""class="icon"><span>老挝</span><img src="picture/index12.png" alt="" class="arrow"></a>
+				</li>
+				<li class="countryClick c" data-region="114" data-py="yindunixiya" data-abroad="2">
+					<a href="javascript:void(0)"><img src="picture/yindunixiya.jpg" alt=""class="icon"><span>印度尼西亚</span><img src="picture/index12.png" alt="" class="arrow"></a>
+				</li>
+			</ul>
+		</div>
+		<!-- <div class="m_countryRegion_box">
+			<div class="m_countryRegion c">
+				<div class="popular">
+					<em>热门地区</em>
+					<ul class="c gdt"></ul>
+				</div>
+				<div class="TotalPrice">
+					<em>房产总价</em>
+					<ul class="gdt">
+						<li><a  href="javascript:void(0)" >50万以下</a></li>
+						<li><a  href="javascript:void(0)" >50-100万</a></li>
+						<li><a  href="javascript:void(0)" >100-200万</a></li>
+						<li><a  href="javascript:void(0)" >200-300万</a></li>
+						<li><a  href="javascript:void(0)" >300-500万</a></li>
+						<li><a  href="javascript:void(0)" >500-700万</a></li>
+						<li><a  href="javascript:void(0)" >700-1000万</a></li>
+						<li><a  href="javascript:void(0)" >1000万以上</a></li>
+					</ul>
+				</div>
+				<div class="TotalPrice">
+					<em>房屋类型</em>
+						<ul class="gdt">
+							<li><a  href="javascript:void(0)" data-id="0">不限</a></li>
+							<li ><a  href="javascript:void(0)" data-id="64">别墅</a></li>
+							<li ><a  href="javascript:void(0)" data-id="63" >洋房</a></li>
+							<li ><a  href="javascript:void(0)" data-id="62">公寓</a></li>
+							<li ><a  href="javascript:void(0)" data-id="61">写字楼</a></li>
+							<li ><a  href="javascript:void(0)" data-id="60">普通住宅</a></li>
+						</ul>
+				</div>
+			</div>
+		</div> -->
+	</div>
+	</div>
+	<!-- 功能列表 -->
+	<div class="m_functionlist_box">
+		<ul class="m_functionlist">
+			<li><a href="javascript:void(0)"><img src="picture/index15.png" alt=""><p><em>甄选好房</em><span>中心好地段，好房源，房源实时更新</span></p></a></li>
+			<li><a href="javascript:void(0)"><img src="picture/index16.png" alt=""><p><em>免费咨询</em><span>24小时免费咨询，解答投资疑虑</span></p></a></li>
+			<li><a href="javascript:void(0)"><img src="picture/index17.png" alt=""><p><em>会员服务</em><span>免费接送机看房，投资价值分析</span></p></a></li>
+			<li><a href="javascript:void(0)"><img src="picture/index18.png" alt=""><p><em>售前中后服务</em><span>投资海外房产，与您一路相伴</span></p></a></li>
+		</ul>
+	</div>
+	<!-- 精选房源 -->
+	<div class="box">
+		<div class="title">
+			<div class="title_t">精选房源<span>recommend</span></div>
+			<div class="title_r">
+				<div class="title_r_cent c">
+					<div class="title_r_ui c">
+						<a href="javascript:viod(0)" class="on" data-id="0">全部</a>
+						<a href="javascript:viod(0)" data-id="92">柬埔寨</a>
+						<a href="javascript:viod(0)" data-id="107">菲律宾</a>
+						<a href="javascript:viod(0)" data-id="104">迪拜</a>
+						<a href="javascript:viod(0)" data-id="87">泰国</a>
+						<a href="javascript:viod(0)" data-id="111">越南</a>
+						<a href="javascript:viod(0)" data-id="95">马来西亚</a>
+					</div>
+					<a href="javascript:void(0)" class="title_r_cent_gd"><img src="picture/index24.png" alt=""></a>
+				</div>
+				
+				</div>
+			</div>
+			<!-- 楼盘 -->
+			<div class="lp_conter">
+				<ul>
+					<li>
+						<div class="lp_conter_img">
+							<a href="javascript:void(0)">
+								<img src="images/same1.jpg" alt="">
+								<div class="lp_conter_price">
+									<span>约￥16890元/㎡</span>
+									<p>(有效期：2020/02/01-2020/02/29)</p>
+								</div>
+							</a>
+						</div>
+						<div class="lp_font">
+							<p><a href="javascript:void(0)">保利公馆-Poly 1 Mansion</a></p>
+							<p>金边 · 使用面积：47㎡-57㎡</p>
+						</div>
+						<div class="lp_info">
+							<div class="lp_info_span chi">
+								<span>推荐理由：保利公馆打造私人会所，咖啡厅，健身房，餐厅，酒店，酒吧等完善。</span>
+								<p class="chi">
+									<i>近一年房价涨幅15%</i>
+									<i>参考收益：7%</i>
+									<a href="javascript:void(0)"><img src="images/bmyh.gif" alt=""></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="lp_conter_img">
+							<a href="javascript:void(0)">
+								<img src="images/same.jpg" alt="">
+								<div class="lp_conter_price">
+									<span>约￥16890元/㎡</span>
+									<p>(有效期：2020/02/01-2020/02/29)</p>
+								</div>
+							</a>
+						</div>
+						<div class="lp_font">
+							<p><a href="javascript:void(0)">保利公馆-Poly 1 Mansion</a></p>
+							<p>金边 · 使用面积：47㎡-57㎡</p>
+						</div>
+						<div class="lp_info">
+							<div class="lp_info_span chi">
+								<span>推荐理由：保利公馆打造私人会所，咖啡厅，健身房，餐厅，酒店，酒吧等完善。</span>
+								<p class="chi">
+									<i>近一年房价涨幅15%</i>
+									<i>参考收益：7%</i>
+									<a href="javascript:void(0)"><img src="images/bmyh.gif" alt=""></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="lp_conter_img">
+							<a href="javascript:void(0)">
+								<img src="images/same2.jpg" alt="">
+								<div class="lp_conter_price">
+									<span>约￥16890元/㎡</span>
+									<p>(有效期：2020/02/01-2020/02/29)</p>
+								</div>
+							</a>
+						</div>
+						<div class="lp_font">
+							<p><a href="javascript:void(0)">保利公馆-Poly 1 Mansion</a></p>
+							<p>金边 · 使用面积：47㎡-57㎡</p>
+						</div>
+						<div class="lp_info">
+							<div class="lp_info_span chi">
+								<span>推荐理由：保利公馆打造私人会所，咖啡厅，健身房，餐厅，酒店，酒吧等完善。</span>
+								<p class="chi">
+									<i>近一年房价涨幅15%</i>
+									<i>参考收益：7%</i>
+									<a href="javascript:void(0)"><img src="images/bmyh.gif" alt=""></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="lp_conter_img">
+							<a href="javascript:void(0)">
+								<img src="images/same.jpg" alt="">
+								<div class="lp_conter_price">
+									<span>约￥16890元/㎡</span>
+									<p>(有效期：2020/02/01-2020/02/29)</p>
+								</div>
+							</a>
+						</div>
+						<div class="lp_font">
+							<p><a href="javascript:void(0)">保利公馆-Poly 1 Mansion</a></p>
+							<p>金边 · 使用面积：47㎡-57㎡</p>
+						</div>
+						<div class="lp_info">
+							<div class="lp_info_span chi">
+								<span>推荐理由：保利公馆打造私人会所，咖啡厅，健身房，餐厅，酒店，酒吧等完善。</span>
+								<p class="chi">
+									<i>近一年房价涨幅15%</i>
+									<i>参考收益：7%</i>
+									<a href="javascript:void(0)"><img src="images/bmyh.gif" alt=""></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="lp_conter_img">
+							<a href="javascript:void(0)">
+								<img src="images/same3.jpg" alt="">
+								<div class="lp_conter_price">
+									<span>约￥16890元/㎡</span>
+									<p>(有效期：2020/02/01-2020/02/29)</p>
+								</div>
+							</a>
+						</div>
+						<div class="lp_font">
+							<p><a href="javascript:void(0)">保利公馆-Poly 1 Mansion</a></p>
+							<p>金边 · 使用面积：47㎡-57㎡</p>
+						</div>
+						<div class="lp_info">
+							<div class="lp_info_span chi">
+								<span>推荐理由：保利公馆打造私人会所，咖啡厅，健身房，餐厅，酒店，酒吧等完善。</span>
+								<p class="chi">
+									<i>近一年房价涨幅15%</i>
+									<i>参考收益：7%</i>
+									<a href="javascript:void(0)"><img src="images/bmyh.gif" alt=""></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="lp_conter_img">
+							<a href="javascript:void(0)">
+								<img src="images/same4.jpg" alt="">
+								<div class="lp_conter_price">
+									<span>约￥16890元/㎡</span>
+									<p>(有效期：2020/02/01-2020/02/29)</p>
+								</div>
+							</a>
+						</div>
+						<div class="lp_font">
+							<p><a href="javascript:void(0)">保利公馆-Poly 1 Mansion</a></p>
+							<p>金边 · 使用面积：47㎡-57㎡</p>
+						</div>
+						<div class="lp_info">
+							<div class="lp_info_span chi">
+								<span>推荐理由：保利公馆打造私人会所，咖啡厅，健身房，餐厅，酒店，酒吧等完善。</span>
+								<p class="chi">
+									<i>近一年房价涨幅15%</i>
+									<i>参考收益：7%</i>
+									<a href="javascript:void(0)"><img src="images/bmyh.gif" alt=""></a>
+								</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+		</div>
+	</div>
+	<!-- 精彩推荐 -->
+	<div class="contation">
+		<div class="title">
+			<div class="title_t"><a href="javascript:void(0)">精彩推荐<span>information</span></a></div>
+		</div>
+		<div class="contation_ui c">
+			<div class="m_video">
+				<!-- 左轮播 -->
+				<div class="m_lunbo">
+					<div class="bd">
+						<ul class="m_video_lb">
+							<li><a href=""><img src="picture/same2.jpg" alt=""><i></i><div class="m_video_text"><span>摩根大厦-Morgan Tower</span></div></a></li>
+							<li><a href=""><img src="picture/same32.jpg" alt=""><i></i><div class="m_video_text"><span>半岛壹号</span></div></a></li>
+							<li><a href=""><img src="picture/same16.jpg" alt=""><i></i><div class="m_video_text"><span>美丹-SOBHA Hartland</span></div></a></li>
+						</ul>
+					</div>
+					<span class="prev" onclick="return false">  </span>
+					<span class="next">  </span>
+					<div class="hd">
+						<ul>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				<div class="m_video_list c">
+					<div class="m_videonr">
+					<a href="javascript:void(0)"><img src="picture/same29.jpg" alt=""><i></i><div class="m_videonr_text"><span>威尼斯别墅</span></div></a>	
+					</div>
+					<div class="m_videonr">
+						<a href="javascript:void(0)"><img src="picture/same33.jpg" alt=""><i></i><div class="m_videonr_text"><span>Eco Green Saigon</span></div></a>
+					</div>
+				</div>
+			</div>
+			<!-- 最新资讯 -->
+			<div class="m_list_box">
+				<p class="m_list_title">
+					<em>最新资讯</em>
+					<a href="javascript:void(0)">更多资讯 <span>></span></a>
+					</p>
+					<ul class="m_list">
+						<li class="chi">
+							<a href="javascript:void(0)">
+								<div class="images"><img src="picture/ma.jpg" alt=""></div>
+								<div class="m_list_text">
+									<p class="title">马来西亚买房需要注意哪些事项？</p>
+									<p class="txt">说起购房，好多人都会说，这是一件大事，一定要慎重，尤其是在海外进行投资，尤其更要注意，不然到最后“赔了夫人又折兵”。</p>
+									<p class="source"><span>掘金海外</span><i>2010-01-30</i></p>
+								</div>
+							</a>
+						</li>
+						<li class="chi">
+							<a href="javascript:void(0)">
+								<div class="images"><img src="picture/yun.jpg" alt=""></div>
+								<div class="m_list_text">
+									<p class="title">去越南旅游会遇到几件奇怪的事情，男人喜欢戴绿帽子，这是为什么</p>
+									<p class="txt">说起购房，好多人都会说，这是一件大事，一定要慎重，尤其是在海外进行投资，尤其更要注意，不然到最后“赔了夫人又折兵”。</p>
+									<p class="source"><span>掘金海外</span><i>2010-01-30</i></p>
+								</div>
+							</a>
+						</li>
+						<li class="chi">
+							<a href="javascript:void(0)">
+								<div class="images"><img src="picture/yue.jpg" alt=""></div>
+								<div class="m_list_text">
+									<p class="title">越南旅游部正式公布2020年东盟年LOGO</p>
+									<p class="txt">说起购房，好多人都会说，这是一件大事，一定要慎重，尤其是在海外进行投资，尤其更要注意，不然到最后“赔了夫人又折兵”。</p>
+									<p class="source"><span>掘金海外</span><i>2010-01-30</i></p>
+								</div>
+							</a>
+						</li>
+						<li class="chi">
+							<a href="javascript:void(0)">
+								<div class="images"><img src="picture/tai.jpg" alt=""></div>
+								<div class="m_list_text">
+									<p class="title">看看在泰国买房子，是什么感受！</p>
+									<p class="txt">说起购房，好多人都会说，这是一件大事，一定要慎重，尤其是在海外进行投资，尤其更要注意，不然到最后“赔了夫人又折兵”。</p>
+									<p class="source"><span>掘金海外</span><i>2010-01-30</i></p>
+								</div>
+							</a>
+						</li>
+					</ul>
+			</div>
+		</div>
+	</div>
+	<div class="background"></div>
+	<div class="z_box">
+		<div class="z_list">
+			<div class="z_list_box"><a href="javscript:void(0)">特色推荐<span>characteristic</span></a></div>
+			<div class="feature_box_list">
+				<ul class="c">
+					<li class="toplist">
+						<div class="toplist_main">
+						 <a href="javascript:void(0)">
+							 <p class="img"><img src="picture/same5.jpg" alt=""></p>
+							 <div class="text">
+								 <p class="te_img"><img src="picture/ico_in1_1.png" alt=""></p>
+								 <p class="te_tit">投资热点</p>
+								 <p class="te_txt">【投资分析】未来柬埔寨房产刚需如何？</p>
+							 </div>
+						 </a>
+						</div>
+					</li>
+					<li class="toplist">
+						<div class="toplist_main">
+						 <a href="javascript:void(0)">
+							 <p class="img"><img src="picture/ico_in2.png" alt=""></p>
+							 <div class="text">
+								 <p class="te_img"><img src="picture/ico_in2_1.png" alt=""></p>
+								 <p class="te_tit">海外考察团</p>
+								 <p class="te_txt">情人节用马来西亚的空气来爱你---海岛盘点</p>
+							 </div>
+						 </a>
+						</div>
+					</li>
+					<li class="toplist bottomlist">
+						<div class="toplist_main">
+						 <a href="javascript:void(0)">
+							 <p class="img"><img src="picture/ico_in4.png" alt=""></p>
+							 <div class="text">
+								 <p class="te_img"><img src="picture/ico_in4_1.png" alt=""></p>
+								 <p class="te_tit">房产知识</p>
+								 <p class="te_txt">【投资分析】未来柬埔寨房产刚需如何？</p>
+							 </div>
+						 </a>
+						</div>
+					</li>
+					<li class="toplist bottomlist">
+						<div class="toplist_main">
+						 <a href="javascript:void(0)">
+							 <p class="img"><img src="picture/ico_in3.png" alt=""></p>
+							 <div class="text">
+								 <p class="te_img"><img src="picture/ico_in3_1.png" alt=""></p>
+								 <p class="te_tit">国际留学</p>
+								 <p class="te_txt">【投资分析】未来柬埔寨房产刚需如何？</p>
+							 </div>
+						 </a>
+						</div>
+					</li>
+					<li class="toplist bottomlist">
+						<div class="toplist_main">
+						 <a href="javascript:void(0)">
+							 <p class="img"><img src="picture/ico_in5.png" alt=""></p>
+							 <div class="text">
+								 <p class="te_img"><img src="picture/ico_in5_1.png" alt=""></p>
+								 <p class="te_tit">购房流程</p>
+								 <p class="te_txt">【投资分析】未来柬埔寨房产刚需如何？</p>
+							 </div>
+						 </a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="z_wmtitle">
+		<div class="z_title">
+			<p>免责声明:本站显示的房源面积，皆为套内建筑面积。本站显示的房源信息、房价、租金收益等数据，均来源于全球开发商/房产代理商/经纪人/提供，或来自房源所在当地国家网站或房地产网站公布的数据。历史数据不代表未来走势，不构成对未来数据表现的保证，仅供参考。如房源信息有误，您可以投诉或发送举报邮件到1262793065@qq.com</p>
+			<p>1)房源所示“户型图、房屋用途、交易权属、建成年代、产权年限、建筑结构、房源价格”等，仅供参考，购房时请以房本信息为准。</p>
+			<p>2)房源介绍中的周边配套、在建设施、规划设施、地铁信息、绿化率、得房率、容积率等信息为通过物业介绍、房产证、实勘、房产官网、开发商/房产代理商等渠道获取，因时间政策会发生变化，与实际情况可能略有偏差，房源介绍仅供参考。</p>
+			<p>3)房源介绍中与距离相关的数据均来源于百度地图。</p>
+			<p>4)除本站原创文章外，所有转载的文章、图片、音频、视频等资料文件归权利方所有，若转载内容侵权，请相关权利方联系，以便我方删除。</p>
+		</div>
+	</div>
+	<div class="z_footer_box">
+		<div class="z_footer">
+			<div class="z_bottom">
+				<a href="javascript:void(0)"><img src="images/logo_m.png" alt=""></a>
+				<span>客服热线：400-0668-896</span>	
+			</div>
+			<div class="z_bottom_title">
+				<a href="JavaScript:void(0)">关于我们</a>
+				<a href="JavaScript:void(0)">帮我找房</a>
+				<a href="JavaScript:void(0)">考察团报名</a>
+				<a href="JavaScript:void(0)">隐私协议</a>
+			</div>
+			<div class="z_right c">
+				<ul>
+					<li><img src="picture/index29.png" alt=""><span>关注海居订阅号</span></li>
+					<li><img src="picture/index04.jpg" alt=""><span>关注海居小程序</span></li>
+				</ul>
+			</div>
+			<div class="z_bottom_title_r c">
+				<a href="JavaScript:void(0)" class="on">海外房产</a>
+				<a href="JavaScript:void(0)">关注我们</a>
+				<a href="JavaScript:void(0)">友情链接</a>
+			</div>
+			<div class="z_bottom_title_c">
+				<a href="JavaScript:void(0)">海南房产</a>
+				<a href="JavaScript:void(0)">越南房产</a>
+				<a href="JavaScript:void(0)">美国房产</a>
+				<a href="JavaScript:void(0)">老挝房产</a>
+				<a href="JavaScript:void(0)">泰国房产</a>
+				<a href="JavaScript:void(0)">缅甸房产</a>
+				<a href="JavaScript:void(0)">澳大利亚房产</a>
+				<a href="JavaScript:void(0)">马来西亚房产</a>
+				<a href="JavaScript:void(0)">印度尼西亚房产</a>
+				<a href="JavaScript:void(0)">新加坡房产</a>
+			</div>
+			<div class="z_email">
+				<span><img src="picture/index27.png" alt="">客服热线：400-0668-896 (周一至周日 24小时在线)</span>
+				<span><img src="picture/index28.png" alt="">Email：1262793065@qq.com</span>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

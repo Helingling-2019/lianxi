@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<script src="jquery.min.js"></script>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div class="form-table" id="app">
+		<select name="choose" id="">
+			<option value="" v-for="item in msg">{{item}}</option>
+		</select>
+		<changeselct>
+			
+		</changeselct>
+	</div>
+	<script>
+		var difinition = {
+			methods:{
+				show:function(){
+					$(".wrap ul").toggle().toggleClasss("ani");
+					$(".wrap span").toggleClass("changeRadius");
+					$(".wrap ul li:last").toggleClass("last-changeRamdius")
+				}
+			}
+		}
+	</script>
+</body>
+</html>

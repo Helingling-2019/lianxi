@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body>
+	<table id="difinition">
+		
+	</table>
+	<script src="layui/layui.js"></script>
+	<script>
+		layui.use("table",function(){
+			var table = layui.table;
+			table.render({
+				elem:"#difinition",
+				height:512,
+				width:600,
+				url:'getData.php',
+				limit:2,
+				page:true,
+				cols: [[ 
+      {field: 'ID', title: 'ID', width:80, sort: true, fixed: 'left'}
+      ,{field: 'username', title: '姓名', width:80}
+      ,{field: 'score', title: '分数', width:80, sort: true}
+    ]]
+
+			})
+		});
+	</script>
+</body>
+</html>

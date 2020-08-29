@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body>
+	<div></div>
+		<button class="layui-btn layui-btn-lg layui-btn-warm"></button>
+	
+	<script src="layui/layui.js"></script>
+	<script>
+		layui.use("layer",function(){
+			var layer = layui.layer;
+			document.querySelector("button").onclick = function(){
+				layer.open({
+					title:"登录框",
+					content:"<div class='layui-row'><span class='layui-col-md3'>用户名:</span><p class='layui-col-md8'><input type='text' class='layui-input'></p></div><div class='layui-row'><span class='layui-col-md3'>密码:</span><p class='layui-col-md8'><input type='text' class='layui-input'></p></div>",
+					area:["500px","300px"]
+				})
+					
+				
+			}
+			
+		})
+	</script>
+</body>
+</html>

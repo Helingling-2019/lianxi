@@ -1,0 +1,10 @@
+/* pages/check/check.wxss */
+.check{ display: flex; padding:8px;}
+.input{ flex:8; border:2px solid pink; border-radius:6px 0 0 6px; height:28px; line-height:28px; padding:8px;}
+.btn{ flex:2; height:48px; background:pink; color:#fff; border:none; outline:none; border-radius:0 6px 6px 0;}
+.btn::after{ border:none;}
+.table{ border:2px solid pink; margin:8px; border-radius:6px;}
+.tr{ border-bottom:2px solid pink; display: flex;}
+.td{ flex:7; display:flex; height:38px; padding:0 10px; justify-content: flex-start; align-items:center;}
+.tr .td:first-child{ flex:3; border-right:2px solid pink; justify-content: flex-end;}
+.table .tr:last-child{ border-bottom:none;}

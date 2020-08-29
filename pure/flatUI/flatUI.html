@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="dist/css/vendor/bootstrap.min.css">
+	<link rel="stylesheet" href="dist/css/flat-ui.min.css">
+	<script src="jquery.min.js"></script>
+	<script src="popper.min.js"></script>
+	
+	<script src="dist/scripts/flat-ui.min.js"></script>
+	<script src="another/application.js"></script>
+</head>
+<body>
+	<ul class="pager">
+  <li class="previous">
+    <a href="#">
+      <span>
+        <i class="fui-arrow-left"></i>
+       上一篇
+      </span>
+    </a>
+  </li>
+
+  <li class="next">
+    <a href="#">
+    下一篇
+      <i class="fui-arrow-right"></i>
+
+    </a>
+  </li>
+</ul>
+<!--  pagination-minimal -->
+<div class="pagination">
+  <ul>
+    <li class="previous">
+      <a href="#" class="fui-arrow-left"></a>
+    </li>
+   <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+     <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+       <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+         <li><a href="#">7</a></li>
+    <!-- Make dropdown appear above pagination -->
+    <li class="pagination-dropdown dropup">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+      <!-- Dropdown menu -->
+      <ul class="dropdown-menu">
+        <li class="active">
+          <a href="#">10-20</a>
+        </li>
+        <li>
+          <a href="#">10-20</a>
+        </li>
+        <li>
+          <a href="#">10-20</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="next active">
+      <a href="#" class="fui-arrow-right"></a>
+    </li>
+  </ul>
+</div>
+
+<ul class="pagination-plain">
+    <li class="previous">
+      <a href="#" class="fui-arrow-left"></a>
+    </li>
+   <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+     <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+       <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+         <li><a href="#">7</a></li>
+    <!-- Make dropdown appear above pagination -->
+    <li class="pagination-dropdown dropup">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+      <!-- Dropdown menu -->
+      <ul class="dropdown-menu">
+        <li class="active">
+          <a href="#">10-20</a>
+        </li>
+        <li>
+          <a href="#">10-20</a>
+        </li>
+        <li>
+          <a href="#">10-20</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="next active">
+      <a href="#" class="fui-arrow-right"></a>
+    </li>
+  </ul>
+
+  <div class="pagination pagination-info">
+  <a href="#" class="btn btn-success previous">Previous</a>
+
+  <ul>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+  </ul>
+
+  <a href="#" class="btn btn-success next">Next</a>
+</div>
+
+<div class="progress">
+  <div class="progress-bar" style="width: 40%;"></div>
+  <div class="progress-bar progress-bar-warning" style="width: 10%;"></div>
+  <div class="progress-bar progress-bar-danger" style="width: 10%;"></div>
+  <div class="progress-bar progress-bar-success" style="width: 10%;"></div>
+  <div class="progress-bar progress-bar-info" style="width: 10%;"></div>
+</div>
+<style>
+.margin{ margin-top:20px; width:300px; margin-left:auto; margin-right:auto;}
+</style>
+<div class="progress margin">
+  <div class="progress-bar progress-bar-warning" style="width: 60%;"></div>
+</div>
+
+<select class="form-control select select-primary select-block mbl">
+  <optgroup label="Profile">
+    <option value="0">My Profile</option>
+    <option value="1">My Friends</option>
+  </optgroup>
+  <optgroup label="System">
+    <option value="2">Messages</option>
+    <option value="3">My Settings</option>
+    <option value="4">Logout</option>
+  </optgroup>
+</select>
+
+<select multiple="multiple" class="form-control multiselect multiselect-info">
+  <option value="0">1</option>
+  <option value="1" selected>2</option>
+  <option value="2" selected>3</option>
+  <option value="3" selected>4</option>
+  <option value="4">5</option>
+</select>
+<script>
+$("select").select2({dropdownCssClass: 'dropdown-inverse'});
+</script>
+
+<!-- <div id="slider" style="height: 200px;"></div>
+<script>
+var $slider = $("#slider");
+if ($slider.length > 0) {
+  $slider.slider({
+    min: 1,
+    max: 5,
+    value: 3,
+    orientation: "vertical",
+    range: "min"
+  }).addSliderSegments($slider.slider("option").max);
+}
+</script> -->
+
+<!-- Default switch -->
+<input type="checkbox" checked data-toggle="switch" name="default-switch" id="switch-01" />
+
+<!-- Square switch -->
+<div class="bootstrap-switch-square">
+  <input type="checkbox" checked data-toggle="switch" name="square-switch" id="switch-02" />
+</div>
+
+<!-- Primary / Default -->
+<div class="bootstrap-switch-square">
+<input type="checkbox" checked data-toggle="switch" name="default-switch-colors" data-on-color="primary" data-off-color="default" id="switch-03" />
+</div>
+
+<!-- Info / Default -->
+<input type="checkbox" checked data-toggle="switch" name="info-square-switch" data-on-color="info" id="switch-04" />
+
+<!-- Success / Default -->
+<input type="checkbox" checked data-toggle="switch" name="info-square-switch" data-on-color="success" id="switch-05" />
+
+<!-- Warning / Default -->
+<input type="checkbox" readonly checked data-toggle="switch" name="info-square-switch" data-on-color="warning" id="switch-06" />
+
+<!-- Danger / Default -->
+<input type="checkbox" checked data-toggle="switch" name="info-square-switch" data-on-color="danger" id="switch-07" />
+
+<input type="checkbox" checked data-toggle="switch" name="custom-switch-text" data-on-text="开" data-off-text="关" id="switch-10" />
+
+<div class="bootstrap-switch-square">
+  <input type="checkbox" data-toggle="switch" data-on-text="<i class='fui-check'></i>" data-off-text="<i class='fui-cross'></i>" name="custom-square-switch-icons" id="switch-11" />
+</div>
+
+<script>
+$('#switch-07').bootstrapSwitch('onColor', 'success');
+$('#switch-07').bootstrapSwitch('disabled', true);
+</script>
+
+<!-- Default tags input -->
+<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="Clean, Fresh, Modern, Unique" />
+
+<!-- Primary tags input -->
+<div class="tagsinput-primary">
+<input name="tagsinput" class="tagsinput" value="School, Teacher, Colleague" />
+</div>
+
+<script>
+$(".tagsinput").tagsinput();
+</script>
+<style>
+.inlineblock{ display: inline-block; }
+</style>
+<p class="inlineblock" data-toggle="tooltip" title="发射点发射点">发射点发射点各个分公司</p>
+
+
+<div class="form-group">
+  <input class="form-control" type="text" id="typeahead-demo-01" />
+</div>
+<script>
+var states = new Bloodhound({
+  datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.word); },
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  limit: 4,
+  local: [
+    { word: "南昌一中" },
+    { word: "赣州一中" },
+    { word: "上饶一中" },
+    { word: "新余一中" },
+    { word: "萍乡一中" },
+    { word: "吉安一中" }
+  ]
+});
+
+states.initialize();
+
+$('#typeahead-demo-01').typeahead(null, {
+  name: 'states',
+  displayKey: 'word',
+  source: states.ttAdapter()
+});
+</script>
+<video autoplay controls src="http://www.jxdtrl.com/upload/201703/201703151336115966.mp4"></video>
+
+<script src="video.js"></script>
+<video class="video-js" controls preload="auto" data-setup="{}">
+  <source src="http://www.jxdtrl.com/upload/201703/201703151336115966.mp4" type="video/mp4">
+  <!-- <source src="http://iurevych.github.com/Flat-UI-videos/big_buck_bunny.webm" type="video/webm"> -->
+</video>
+
+
+</body>
+</html>

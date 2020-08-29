@@ -1,0 +1,38 @@
+/*
+MySQL Data Transfer
+Source Host: localhost
+Source Database: data
+Target Host: localhost
+Target Database: data
+Date: 2019/9/3 20:30:00
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+-- ----------------------------
+-- Table structure for table
+-- ----------------------------
+CREATE TABLE `table` (
+  `id` int(30) unsigned zerofill NOT NULL AUTO_INCREMENT COMMENT 'auto increment',
+  `useName` varchar(400) CHARACTER SET utf8 DEFAULT NULL,
+  `data` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records 
+-- ----------------------------
+INSERT INTO `table` VALUES ('000000000000000000000000000001', '大学那些事儿', '2014-01-09');
+INSERT INTO `table` VALUES ('000000000000000000000000000002', '我遇见的诗意昌航', '2014-03-12');
+INSERT INTO `table` VALUES ('000000000000000000000000000003', '月影徘徊——豫章故郡求学有感', '2014-09-21');
+INSERT INTO `table` VALUES ('000000000000000000000000000004', '朝华羲实', '2015-01-21');
+INSERT INTO `table` VALUES ('000000000000000000000000000005', '老李', '2015-03-15');
+INSERT INTO `table` VALUES ('000000000000000000000000000006', '昌航月色', '2015-06-01');
+INSERT INTO `table` VALUES ('000000000000000000000000000007', '行走在梦想的泥土上', '2015-10-12');
+INSERT INTO `table` VALUES ('000000000000000000000000000008', '手机端发布', '2016-01-23');
+INSERT INTO `table` VALUES ('000000000000000000000000000009', '闪电发货士大夫和', '2016-06-21');
+INSERT INTO `table` VALUES ('000000000000000000000000000010', '上岛咖啡和IP微博', '2016-07-12');
+INSERT INTO `table` VALUES ('000000000000000000000000000011', '圣诞快乐分别阿克如课程表', '2017-04-21');
+INSERT INTO `table` VALUES ('000000000000000000000000000012', '好地方去电费卡婆婆斯柯达', '2017-08-07');
+INSERT INTO `table` VALUES ('000000000000000000000000000013', '美好斯柯达福克斯', '2018-01-23');
+INSERT INTO `table` VALUES ('000000000000000000000000000014', '颇尔哦啊办法哦配偶艾尔奇葩', '2018-12-21');
+INSERT INTO `table` VALUES ('000000000000000000000000000015', '指示灯分布是客户', '2017-03-12');

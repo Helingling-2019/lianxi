@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<link rel="stylesheet" href="pure.css">
+	<link rel="stylesheet" href="grids-responsive-min.css">
+	<style>
+		.pure-form legend{width:500px;border:none;color:orange;text-align: center;font-weight: bold;font-size: 22px;}
+		.unit{width:500px;margin-left: 276px;}
+		#p{width:420px;margin-left: 390px;font-size: 13px;height:45px;}
+		 p{margin-left: 100px;font-size: 13px;}
+	</style>
+</head>
+<body>
+	<form action="" class="pure-form pure-form-aligned boxsize">
+		<fieldset>
+			<legend>个人信息注册</legend>
+			<p id="p">注册成功后，身份证号码为登录名，医保卡密码为初始登录密码，如修改请登录后进行修改，此密码修改只修改查询密码，不修改医保卡密码！</p>
+			<div class="unit">
+				<label>身份证号：</label> <input type="text" class="pure-input-1-2" />
+				<p>请输入您的公民身份证号码。</p>
+				<label>姓名：</label> <input type="text" class="pure-input-1-2" />
+				<p>请输入您的参保姓名。</p>
+				<label>医保卡密码（或社保卡后6位）：</label> <input type="text" class="pure-input-1-2" />
+				<p>请输入您的医保卡密码，如果没有医保卡，请使用社保卡银行卡后6位。</p>
+				<label>手机号：</label> <input type="text" class="pure-input-1-2" />
+				<p>请填写手机号码。</p>
+				<label>个人编号：</label> <input type="text" class="pure-input-1-2" />
+				<p>您的社保个人编号，身份信息验证通过后，自动显示</p>
+				<label>登录名：</label> <input type="text" class="pure-input-1-2" />
+				<p>身份证号为登录名。</p>
+				<label>登录密码：</label> <input type="text" class="pure-input-1-2" />
+				<p>医保卡注册的用户登录密码为医保卡密码，社保卡注册的用户登录密码是社保卡后6位。</p>
+			
+			</div>
+			<div class="pure-controls">
+			<label class="pure-checkbox"><input type="checkbox" />同意服务条款和隐私政策</label>
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>

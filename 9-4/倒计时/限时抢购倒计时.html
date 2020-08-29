@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+<style>
+	*{ margin:0; padding:0;}
+	.timer{ width:300px; height:160px; background:#c81623; text-align: center; line-height:160px; color: #fff; font-size:20px; font-weight: bold; margin:30px auto;}
+	.timer span{ background:#000; width:30px; height:30px; line-height:30px; display: inline-block;}
+	
+	
+</style>
+	<div class="timer">
+		<span class="hour">00</span> : <span class="minute">00</span> : <span class="second">00</span>
+	</div>
+	<script>
+		var receiveTime = "00:00:15";
+		var arr = receiveTime.split(":");
+		$(".hour").text(arr[0]);
+		$(".minute").text(arr[1]);
+		$(".second").text(arr[2]);
+		arr[0] = Number(arr[0]);
+		arr[1] = Number(arr[1]);
+		arr[2] = Number(arr[2]);
+		var timer = setInterval(countTime,1000);
+		var hour='';
+		var minute = '';
+		var second = '';
+		function countTime(){
+			if(arr[2]<11 && arr[2]>0){
+				arr[2]--;
+				second = "0" + arr[2];
+				$(".second").text(second);
+				
+			}else if(arr[2]>=11){
+				arr[2]--;
+				second = arr[2];
+				$(".second").text(second);
+				
+			}else if(arr[2] == 0){
+				second = 59;
+				arr[2] = 60;
+				/* 分数的执行操作 */
+				if(arr[1]>0 && arr[1] <11){
+					arr[1]--;
+					minute = "0" + arr[1];
+					$(".minute").text(minute);
+				}else if(arr[1]>=11){
+				arr[1]--;
+				minute = arr[1];
+				$(".minute").text(minute);
+				}else if(arr[1] == 0){
+				minute = 59;
+				arr[1] = 60;
+				
+				/* 小时执行的操作 */
+				if(arr[0]>0 && arr[0] <11){
+					arr[0]--;
+					hour = "0" + arr[0];
+					$(".hour").text(hour);
+				}else if(arr[0]>=11){
+				arr[0]--;
+				hour = arr[0];
+				$(".hour").text(hour);
+				}else if(arr[0]==0){
+					clearInterval(timer);
+					$(".timer").hide();
+					alert("商品活动已结束");
+				}
+				
+				$(".minute").text(minute);
+					arr[1]--;
+				}
+				
+				
+				$(".second").text(second);
+				arr[2]--;
+			}
+						
+		}
+	</script>
+</body>
+</html>

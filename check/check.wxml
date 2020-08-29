@@ -1,0 +1,34 @@
+<view class="check">
+<input class="input" type="number" bindinput="input"></input>
+<button class="btn" bindtap="check">查询</button>
+</view>
+<view class="table" hidden="{{is}}">
+   <view class="tr" wx:for="{{newarr}}" wx:key="{{index}}">
+      <view class="td">
+     {{index}}</view>
+      <view class="td">
+      {{item}}
+    </view>
+   </view>
+   <!-- <view class="tr">
+     <view class="td">
+     所属省份：</view>
+      <view class="td">
+      江西
+    </view>
+   </view>
+   <view class="tr">
+     <view class="td">
+     运营商：</view>
+      <view class="td">
+      中国联通
+    </view>
+   </view>
+   <view class="tr">
+     <view class="td">
+     地区代号：</view>
+      <view class="td">
+      A8776
+    </view>
+   </view> -->
+</view>
